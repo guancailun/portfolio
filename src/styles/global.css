@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --font-helvetica-neue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-kalam: "Kalam", cursive;
+
+  --color-white: hsla(0, 0%, 100%, 1);
+  --color-orange: hsla(27, 100%, 50%, 1);
+  --color-white-orange: hsla(29, 99%, 92%, 1);
+  --color-white-pink: hsla(355, 100%, 98%, 1);
+  --color-dark: hsla(27, 100%, 7%, 1);
+  --color-green: hsla(84, 39%, 41%, 1);
+  --color-grey: hsla(0, 0%, 46%, 1);
+}
