@@ -12,3 +12,9 @@
   --color-green: hsla(84, 39%, 41%, 1);
   --color-grey: hsla(0, 0%, 46%, 1);
 }
+
+@layer base {
+  html {
+    font-family: var(--font-helvetica-neue);
+  }
+}

@@ -1,0 +1,26 @@
+---
+interface Props {
+    href: string;
+}
+
+const { href } = Astro.props;
+
+const path = Astro.url.pathname;
+
+const isActive = path === href;
+
+---
+
+<a class="inline-flex items-center gap-2" href={href}>
+    <div class:list={[
+        'text-grey relative', 
+        isActive && 'text-white',
+        isActive && 'before:absolute before:content-[" "] before:w-[36px] before:h-[36px] before:rounded-full before:bg-orange before:-z-10 before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2'
+    ]}>
+        <slot name="icon" />
+    </div>
+    <span class:list={['text-grey', isActive && 'text-orange']}>
+        <slot />
+    </span>
+</a>
+

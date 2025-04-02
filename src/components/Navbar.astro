@@ -1,0 +1,43 @@
+---
+import Navlink from '@components/Navlink.astro';
+import Logo from '@svg/logo.svg';
+import Behance from '@svg/social-behance.svg';
+import Email from '@svg/social-email.svg';
+import LinkedIn from '@svg/social-linkedin.svg';
+
+import User from '@svg/user.svg';
+import Home from '@svg/home.svg';
+import Briefcase from '@svg/briefcase.svg';
+---
+
+<nav class="px-10 flex justify-between items-center">
+    <Logo />
+    <div class="inline-flex items-center gap-4">
+        <Navlink href="/" >
+            <Home slot="icon" />
+            Home
+        </Navlink>
+        <Navlink href="/works" >
+            <Briefcase slot="icon" />
+            Works
+        </Navlink>
+        <Navlink href="/about" >
+            <User slot="icon" />
+            About
+        </Navlink>
+        
+    </div>
+    <div class="inline-flex gap-2">
+        <Email />
+        <LinkedIn />
+        <Behance />
+    </div>
+</nav>
+
+<style>
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+</style>
